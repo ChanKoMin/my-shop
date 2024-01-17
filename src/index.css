@@ -1,0 +1,5 @@
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+.border-none {
+  border: none;
+  outline: none;
+}
