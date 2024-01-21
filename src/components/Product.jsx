@@ -1,8 +1,9 @@
 import React from "react";
 import { useContextCustom } from "../context/StateContext";
+import { Link } from "react-router-dom";
 
 const Product = (props) => {
-  const { title, description, image, category, price } = props;
+  const { id, title, description, image, category, price } = props;
   const { dispatch } = useContextCustom();
   return (
     <div className="card p-4" style={{ width: "310px" }}>
@@ -22,7 +23,9 @@ const Product = (props) => {
           >
             Add To Cart
           </button>
-          <button className="btn btn-primary">Details</button>
+          <Link to={`/detail/${id}`}>
+            <button className="btn btn-primary">Details</button>
+          </Link>
         </div>
       </div>
     </div>

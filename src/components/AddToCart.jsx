@@ -21,7 +21,7 @@ const AddToCart = () => {
   const total = () => carts?.reduce((pv, cv) => pv + cv.price, 0);
   return (
     <>
-      {carts.length > 1 ? (
+      {carts.length ? (
         <div>
           <div>
             {carts.map((cart) => (
@@ -39,7 +39,7 @@ const AddToCart = () => {
           </div>
           <div className="mt-4 text-end">
             <button
-              onClick={() => dispatch({ type: "CLEAR_CART" })}
+              onClick={() => dispatch({ type: "CLEAR_CART", payload: carts })}
               className="btn btn-danger"
             >
               Clear Cart
