@@ -34,7 +34,7 @@ const Detail = () => {
           onClick={() =>
             dispatch({
               type: "ADD_TO_CART",
-              payload: { id }
+              payload: item
             })
           }
           className="btn btn-primary"
